@@ -1,0 +1,16 @@
+<script>
+    
+    function playRound(playerSelection, computerSelection) {
+
+    }
+
+    function getComputerChoice() {
+        let choices = ['rock','paper','scissors']
+        return choices[Math.floor(Math.random() * choices.length)]
+    }
+
+const computerSelection = getComputerChoice();
+const playerSelection = "rock";
+console.log(playRound(playerSelection, computerSelection));
+
+</script>
