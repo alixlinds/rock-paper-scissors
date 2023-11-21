@@ -1,16 +1,25 @@
 <script>
-    
-    function playRound(playerSelection, computerSelection) {
-
-    }
-
     function getComputerChoice() {
         let choices = ['rock','paper','scissors']
         return choices[Math.floor(Math.random() * choices.length)]
     }
 
-const computerSelection = getComputerChoice();
-const playerSelection = "rock";
-console.log(playRound(playerSelection, computerSelection));
+    function playRound(playerSelection, computerSelection) {
+        if (computerSelection === playerSelection)
+        return "It's a tie :-)";
+        else if (computerSelection === "rock" && playerSelection === "scissors")
+        return "You Lose! Rock beats Scissors"
+        else if (computerSelection === "scissors" && playerSelection === "rock")
+        return "You Win! Rock beats Scissors"
+        else if (computerSelection === "paper" && playerSelection === "rock")
+        return "You Lose! Paper beats Rock"
+        else if (computerSelection === "paper" && playerSelection === "scissors")
+        return "You Win! Scissors beats Paper"
+    }
+    
+    const computerSelection = getComputerChoice();
+    const playerSelection = "rock";
+    console.log(computerSelection)
+    console.log(playRound(playerSelection, computerSelection));
 
 </script>
