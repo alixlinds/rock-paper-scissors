@@ -15,10 +15,12 @@
         return "You Lose! Paper beats Rock"
         else if (computerSelection === "paper" && playerSelection === "scissors")
         return "You Win! Scissors beats Paper"
+        else if (computerSelection === "scissors" && playerSelection === "paper")
+        return "You Lose! Scissors beats Paper"
     }
     
     const computerSelection = getComputerChoice();
-    const playerSelection = "rock";
+    const playerSelection = "paper";
     console.log(computerSelection)
     console.log(playRound(playerSelection, computerSelection));
 
